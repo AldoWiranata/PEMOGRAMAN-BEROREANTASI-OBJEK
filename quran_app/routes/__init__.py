@@ -1,0 +1,1 @@
+from .quran_routes import quran_bp

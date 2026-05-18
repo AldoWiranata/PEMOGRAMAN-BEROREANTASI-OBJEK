@@ -1,0 +1,109 @@
+{
+  "doa_harian": [
+    {
+      "id": 1,
+      "nama": "Doa Sebelum Tidur",
+      "arab": "بِاسْمِكَ اللَّهُمَّ أَحْيَا وَأَمُوتُ",
+      "latin": "Bismikallahumma ahya wa amut",
+      "artinya": "Dengan nama-Mu ya Allah aku hidup dan aku mati"
+    },
+    {
+      "id": 2,
+      "nama": "Doa Bangun Tidur",
+      "arab": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+      "latin": "Alhamdulillahilladzi ahyana ba'da ma amatana wa ilaihin nusyur",
+      "artinya": "Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami dan kepada-Nya kami dibangkitkan"
+    },
+    {
+      "id": 3,
+      "nama": "Doa Sebelum Makan",
+      "arab": "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ",
+      "latin": "Allahumma barik lana fima razaqtana wa qina 'adzaban nar",
+      "artinya": "Ya Allah, berkahilah rezeki yang Engkau berikan kepada kami dan lindungilah kami dari siksa neraka"
+    },
+    {
+      "id": 4,
+      "nama": "Doa Sesudah Makan",
+      "arab": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",
+      "latin": "Alhamdulillahilladzi ath'amana wa saqana wa ja'alana muslimin",
+      "artinya": "Segala puji bagi Allah yang telah memberi makan dan minum kepada kami serta menjadikan kami orang-orang muslim"
+    },
+    {
+      "id": 5,
+      "nama": "Doa Masuk Masjid",
+      "arab": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+      "latin": "Allahummaftah li abwaba rahmatika",
+      "artinya": "Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu"
+    },
+    {
+      "id": 6,
+      "nama": "Doa Keluar Masjid",
+      "arab": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+      "latin": "Allahumma inni as'aluka min fadhlika",
+      "artinya": "Ya Allah, sesungguhnya aku memohon kepada-Mu sebagian dari karunia-Mu"
+    },
+    {
+      "id": 7,
+      "nama": "Doa Masuk Kamar Mandi",
+      "arab": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبَائِثِ",
+      "latin": "Allahumma inni a'udzubika minal khubutsi wal khabaitsi",
+      "artinya": "Ya Allah, sesungguhnya aku berlindung kepada-Mu dari gangguan setan laki-laki dan perempuan"
+    },
+    {
+      "id": 8,
+      "nama": "Doa Keluar Kamar Mandi",
+      "arab": "غُفْرَانَكَ",
+      "latin": "Ghufranaka",
+      "artinya": "Dengan mengharap ampunan-Mu"
+    },
+    {
+      "id": 9,
+      "nama": "Doa Sebelum Belajar",
+      "arab": "رَبِّ زِدْنِي عِلْمًا",
+      "latin": "Rabbi zidni 'ilma",
+      "artinya": "Ya Tuhanku, tambahkanlah ilmu kepadaku"
+    },
+    {
+      "id": 10,
+      "nama": "Doa Sesudah Belajar",
+      "arab": "اللَّهُمَّ إِنِّي أَسْتَوْدِعُكَ مَا عَلَّمْتَنِيهِ فَارْدُدْهُ إِلَيَّ عِنْدَ حَاجَتِي",
+      "latin": "Allahumma inni astaudi'uka ma 'allamtaniihi fardudhu ilayya 'inda hajati",
+      "artinya": "Ya Allah, sesungguhnya aku menitipkan ilmu yang Engkau ajarkan kepadaku, maka kembalikanlah kepadaku saat aku membutuhkannya"
+    },
+    {
+      "id": 11,
+      "nama": "Doa Naik Kendaraan",
+      "arab": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
+      "latin": "Subhanalladzi sakhkhara lana hadza wa ma kunna lahu muqrinina wa inna ila rabbina lamunqalibun",
+      "artinya": "Maha Suci Allah yang menundukkan kendaraan ini untuk kami, padahal kami sebelumnya tidak mampu menguasainya, dan sesungguhnya kami akan kembali kepada Tuhan kami"
+    },
+    {
+      "id": 12,
+      "nama": "Doa Kedua Orang Tua",
+      "arab": "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+      "latin": "Rabbirhamhuma kama rabbayani shaghira",
+      "artinya": "Ya Tuhanku, sayangilah keduanya sebagaimana mereka menyayangiku di waktu kecil"
+    },
+    {
+      "id": 13,
+      "nama": "Doa Masuk Rumah",
+      "arab": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+      "latin": "Allahumma inni as'aluka khairal mauliji wa khairal makhraji, bismillahi walajna wa bismillahi kharajna wa 'alallahi rabbina tawakkalna",
+      "artinya": "Ya Allah, sesungguhnya aku memohon kepada-Mu sebaik-baik tempat masuk dan sebaik-baik tempat keluar, dengan nama Allah kami masuk dan dengan nama Allah kami keluar, dan kepada Allah Tuhan kami kami bertawakal"
+    },
+    {
+      "id": 14,
+      "nama": "Doa Keluar Rumah",
+      "arab": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+      "latin": "Bismillahi tawakkaltu 'alallah, la haula wa la quwwata illa billah",
+      "artinya": "Dengan nama Allah, aku bertawakal kepada Allah, tidak ada daya dan kekuatan kecuali dengan pertolongan Allah"
+    },
+    {
+      "id": 15,
+      "nama": "Doa Keselamatan Dunia Akhirat",
+      "arab": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+      "latin": "Rabbana atina fid dunya hasanah wa fil akhirati hasanah wa qina 'adzaban nar",
+      "artinya": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari siksa neraka"
+    }
+  ]
+}

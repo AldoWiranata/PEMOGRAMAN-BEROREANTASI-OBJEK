@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Al-Qur'an Digital | Tajwid & Bismillah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🕌</span>
+            <span>Al-Qur'an Digital</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn settings-btn" id="settingsBtn">
+                <i class="fas fa-sliders-h"></i> <span>Pengaturan</span>
+            </button>
+            <button class="nav-btn" id="darkModeBtn">
+                <i class="fas fa-moon"></i> <span>Mode Gelap</span>
+            </button>
+            <button class="hamburger" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <button class="menu-btn active" data-page="home">
+                    <i class="fas fa-home"></i><span>Beranda</span>
+                </button>
+                <button class="menu-btn" data-page="surat">
+                    <i class="fas fa-book"></i><span>Daftar Surat</span>
+                </button>
+                <button class="menu-btn" data-page="juz">
+                    <i class="fas fa-layer-group"></i><span>Juz</span>
+                </button>
+                <button class="menu-btn" data-page="doa">
+                    <i class="fas fa-hands-praying"></i><span>Doa Harian</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari surat...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Cari</button>
+            </div>
+            <div id="contentArea">
+                <div class="loading"><i class="fas fa-spinner fa-pulse"></i> Loading...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-sliders-h"></i> Pengaturan</h2>
+                <button class="modal-close settings-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-group">
+                    <h3><i class="fas fa-mobile-alt"></i> Layar</h3>
+                    <div class="toggle-switch">
+                        <span>Biarkan Layar Menyala saat membaca</span>
+                        <input type="checkbox" id="stayAwakeToggle">
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3><i class="fas fa-sort-numeric-down"></i> Nomor Ayat</h3>
+                    <div class="toggle-switch">
+                        <span>Perlihatkan nomor ayat (Arab di samping kanan)</span>
+                        <input type="checkbox" id="showAyatNumberToggle" checked>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3><i class="fas fa-text-height"></i> Ukuran Teks Arab</h3>
+                    <div class="font-control">
+                        <button id="fontMinus">A-</button>
+                        <span id="fontSizeValue">1.4rem</span>
+                        <button id="fontPlus">A+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk menampilkan detail surat dan ayat -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* ============ LIGHT MODE ============ */
+body.light-mode {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-mode .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode .nav-btn {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+body.light-mode .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+}
+
+body.light-mode .menu-btn:hover {
+    background: #f1f5f9;
+}
+
+body.light-mode .menu-btn.active {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+body.light-mode .surat-card,
+body.light-mode .doa-card,
+body.light-mode .daily-doa,
+body.light-mode .feature-card,
+body.light-mode .ayat-item,
+body.light-mode .modal-content,
+body.light-mode .juz-item,
+body.light-mode .settings-group {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode .search-bar input {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode .search-bar button {
+    background: #0284c7;
+    color: white;
+}
+
+body.light-mode .prayer-card {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    border: none;
+}
+
+body.light-mode .ayat-number-badge-arabic {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+/* ============ DARK MODE ============ */
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .navbar {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode .nav-btn {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .sidebar {
+    background: #1e293b;
+    border-right: 1px solid #334155;
+}
+
+body.dark-mode .menu-btn:hover {
+    background: #334155;
+}
+
+body.dark-mode .menu-btn.active {
+    background: #0c4a6e;
+    color: #38bdf8;
+}
+
+body.dark-mode .surat-card,
+body.dark-mode .doa-card,
+body.dark-mode .daily-doa,
+body.dark-mode .feature-card,
+body.dark-mode .ayat-item,
+body.dark-mode .modal-content,
+body.dark-mode .juz-item,
+body.dark-mode .settings-group {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .search-bar input {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .search-bar button {
+    background: #0284c7;
+    color: white;
+}
+
+body.dark-mode .prayer-card {
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+    border: none;
+}
+
+body.dark-mode .ayat-number-badge-arabic {
+    background: #0c4a6e;
+    color: #38bdf8;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.logo-icon {
+    font-size: 1.4rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+}
+
+/* ============ HAMBURGER MENU ============ */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 40px;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    backdrop-filter: blur(4px);
+}
+
+/* ============ APP CONTAINER ============ */
+.app-container {
+    display: flex;
+    min-height: calc(100vh - 62px);
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+    width: 260px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 62px;
+    height: calc(100vh - 62px);
+    transition: left 0.3s;
+    background: inherit;
+    z-index: 1002;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: left;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu-btn i {
+    width: 24px;
+}
+
+/* ============ MAIN CONTENT ============ */
+.main-content {
+    flex: 1;
+    padding: 24px 28px;
+    overflow-y: auto;
+}
+
+/* ============ SEARCH BAR ============ */
+.search-bar {
+    margin-bottom: 28px;
+    display: flex;
+    gap: 12px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 48px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-bar button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ============ SECTION HEADER ============ */
+.section-header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid;
+}
+
+.section-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* ============ PRAYER TIME ============ */
+.prayer-container {
+    margin-bottom: 28px;
+}
+
+.prayer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.prayer-card {
+    flex: 1;
+    min-width: 100px;
+    padding: 16px 12px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.prayer-name {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.prayer-time {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.prayer-next {
+    background: #0284c7;
+    color: white;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* ============ GRIDS ============ */
+.surat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.surat-card {
+    padding: 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.surat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.surat-card .arab {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.juz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    gap: 12px;
+}
+
+.juz-item {
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.juz-item:hover {
+    background: #0284c7 !important;
+    color: white !important;
+}
+
+.doa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.doa-card {
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.doa-card .arab {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.daily-doa {
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.doa-arab {
+    font-size: 1.5rem;
+    font-family: 'Amiri', serif;
+    margin: 16px 0;
+    line-height: 1.8;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.feature-card {
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    background: #0284c7 !important;
+    color: white !important;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* ============ MODAL ============ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1100;
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    margin: 6% auto;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 24px;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    background: inherit;
+    border-radius: 24px 24px 0 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 40px;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+/* ============ AYAT ITEM ============ */
+.ayat-item {
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    transition: 0.2s;
+}
+
+.ayat-arab-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    direction: rtl;
+    margin-bottom: 12px;
+}
+
+.ayat-arab {
+    font-size: 1.4rem;
+    font-family: 'Amiri', serif;
+    line-height: 1.8;
+    text-align: right;
+    flex: 1;
+    word-wrap: break-word;
+}
+
+.ayat-number-badge-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-width: 42px;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    direction: ltr;
+}
+
+.ayat-terjemah {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-top: 8px;
+    text-align: left;
+}
+
+/* ============ BISMILLAH ============ */
+.bismillah-container {
+    text-align: center;
+    margin: 20px 0 24px 0;
+    padding: 12px;
+    border-radius: 20px;
+    background: rgba(184, 134, 11, 0.08);
+}
+
+.bismillah-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.7rem;
+    color: #b8860b;
+    line-height: 1.6;
+    display: inline-block;
+}
+
+/* ============ TAJWID WARNA ============ */
+.tajwid-izhar {
+    color: #e74c3c;
+}
+
+.tajwid-idgham {
+    color: #3498db;
+}
+
+.tajwid-iqlab {
+    color: #2ecc71;
+}
+
+.tajwid-ikhfa {
+    color: #f39c12;
+}
+
+.tajwid-qalqalah {
+    color: #9b59b6;
+}
+
+.tajwid-madd {
+    color: #1abc9c;
+}
+
+/* ============ SETTINGS ============ */
+.settings-group {
+    margin-bottom: 20px;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-switch input {
+    width: 48px;
+    height: 24px;
+    appearance: none;
+    background: #cbd5e1;
+    border-radius: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-switch input:checked {
+    background: #0284c7;
+}
+
+.toggle-switch input::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 3px;
+    transition: 0.2s;
+}
+
+.toggle-switch input:checked::before {
+    left: 25px;
+}
+
+.font-control {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.font-control button {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.loading,
+.empty {
+    text-align: center;
+    padding: 60px;
+    opacity: 0.6;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        height: 100vh;
+        z-index: 1003;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .surat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prayer-card {
+        min-width: 70px;
+        padding: 12px 8px;
+    }
+
+    .prayer-time {
+        font-size: 1rem;
+    }
+
+    .ayat-arab {
+        font-size: 1.2rem;
+    }
+
+    .bismillah-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span:last-child {
+        display: none;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    .ayat-number-badge-arabic {
+        font-size: 0.75rem;
+        min-width: 32px;
+    }
+}
